@@ -12,3 +12,11 @@
 <img width="1476" height="981" alt="image" src="https://github.com/user-attachments/assets/a227d5b2-5890-484a-a1bb-630e9438f072" />
 
 Silly meme site I wanted to create from an idea I had. Feel free to use this in your project or what not! Have fun!
+
+## Run with Docker Compose
+
+```bash
+docker compose up -d
+```
+
+Then open `http://localhost:8080`.

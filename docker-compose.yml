@@ -1,0 +1,9 @@
+services:
+  gravity-loading-bar:
+    image: nginx:alpine
+    container_name: gravity-loading-bar
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+    restart: unless-stopped
