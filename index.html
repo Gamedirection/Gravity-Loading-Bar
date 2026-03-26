@@ -160,30 +160,15 @@
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
         cursor: grab;
         touch-action: none;
-      }
-
-      .handle::before,
-      .handle::after {
-        content: "";
-        position: absolute;
-        background: rgba(255, 255, 255, 0.75);
-        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 18px;
+        line-height: 1;
       }
 
       .handle::before {
-        width: 16px;
-        height: 2px;
-        top: 15px;
-        left: 7px;
-        transform: rotate(45deg);
-      }
-
-      .handle::after {
-        width: 16px;
-        height: 2px;
-        top: 15px;
-        left: 7px;
-        transform: rotate(-45deg);
+        content: "🗘";
       }
 
       .meter.manual-active .handle {
@@ -423,7 +408,7 @@
         document.documentElement.style.setProperty("--progress", `${progress}%`);
         progressText.textContent = `${Math.round(progress)}%`;
         rotationText.textContent = `${rotation.toFixed(0)}deg`;
-        boostText.textContent = `${getSpeedMultiplier(rotation).toFixed(2)}🗘`;
+        boostText.textContent = `${getSpeedMultiplier(rotation).toFixed(2)}x`;
       }
 
       function setRotation(nextRotation) {
